@@ -1,8 +1,8 @@
 pipeline{
 agen any{
 tools{
-jdk 'myjava'
-maven 'mymavan'
+jdk 'MyJava'
+maven 'MyMavan'
 }
 stages{
 stage ('Clonerpo'){
