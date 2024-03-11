@@ -1,0 +1,25 @@
+pipeline{
+agen any{
+tools{
+jdk 'myjava'
+maven 'mymavan'
+}
+stages{
+stage ('Clonerpo'){
+steps{
+git 'https://github.com/PankyTcs/DevOpsClassCodes.git'
+}}
+stage ('Compile'){
+steps {
+   sh 'mvn compile'}}
+stage ('Codereview'){
+steps {
+sh 'mvn pmd:pmd'}}
+stage ('Unittesting'){
+steps {
+sh 'mvn test'}}
+
+}
+}
+}
+}
